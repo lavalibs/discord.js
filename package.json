@@ -1,19 +1,31 @@
 {
   "name": "@lavalink/discord.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Lavalink Library based on lavalink.js made for discord.js",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "typings/index.d.ts",
   "repository": "git@github.com:lavalibs/discord.js.git",
   "author": "Yukine <devyukine@gmx.de>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "prepare": "gulp build"
+  },
   "dependencies": {
-    "discord.js": "discordjs/discord.js",
     "lavalink": "^2.2.2"
+  },
+  "peerDependencies": {
+    "discord.js": ">=11.4.2"
   },
   "devDependencies": {
     "@types/node": "^10.11.2",
     "@types/ws": "^6.0.1",
+    "discord.js": "^11.4.2",
+    "fs-nextra": "^0.3.7",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "merge2": "^1.2.3",
     "tslint": "^5.11.0",
     "typescript": "^3.1.1"
   }
