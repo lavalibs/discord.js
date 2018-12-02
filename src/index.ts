@@ -24,7 +24,9 @@ export class ClusterManager extends BaseCluster {
 	}
 
 	send (guildID: string, packet: any) {
-		if (this.client.guilds.has(guildID)) return (this.client as any).ws.send(packet);
+		const guild = this.client.guilds.get(guildID);
+		const client: any = this.client;
+		if (guild) client.ws.shards ? client.ws.shards.get((guild as any).shardID).send(packet) : client.ws.send(packet);
 		return Promise.resolve();
 	}
 
@@ -50,8 +52,10 @@ export class NodeManager extends BaseNode {
 		});
 	}
 
-	send (guildID: string, packet: any) {
-		if (this.client.guilds.has(guildID)) return (this.client as any).ws.send(packet);
+	send(guildID: string, packet: any) {
+		const guild = this.client.guilds.get(guildID);
+		const client: any = this.client;
+		if (guild) client.ws.shards ? client.ws.shards.get((guild as any).shardID).send(packet) : client.ws.send(packet);
 		return Promise.resolve();
 	}
 }
