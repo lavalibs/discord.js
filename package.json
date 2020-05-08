@@ -1,6 +1,6 @@
 {
   "name": "@lavalink/discord.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lavalink Library based on lavalink.js made for discord.js",
   "main": "dist/index.js",
   "repository": "git@github.com:lavalibs/discord.js.git",
