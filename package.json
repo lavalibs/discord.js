@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "Lavalink Library based on lavalink.js made for discord.js",
   "main": "dist/index.js",
-  "typings": "typings/index.d.ts",
   "repository": "git@github.com:lavalibs/discord.js.git",
   "author": "Yukine <devyukine@gmx.de>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prepare": ""
+    "build": "tsc",
+    "prepare": "build"
   },
   "dependencies": {
     "lavalink": "^2.2.2"
